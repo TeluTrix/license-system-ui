@@ -2,9 +2,9 @@
     <div class="card w-96 bg-neutral text-neutral-content">
         <div class="card-body items-center text-center">
           <h2 class="card-title mb-5">Login</h2>
-          <form>
-            <input type="text" placeholder="E-Mail" class="input input-bordered w-full max-w-xs mb-3" />
-            <input type="password" placeholder="Password" class="input input-bordered w-full max-w-xs mb-3" />
+          <form [formGroup]="loginForm">
+            <input [formControl]="loginForm.controls.userName" type="text" placeholder="E-Mail" class="input input-bordered w-full max-w-xs mb-3" />
+            <input [formControl]="loginForm.controls.password" type="password" placeholder="Password" class="input input-bordered w-full max-w-xs mb-3" />
             <div class="flex flex-row float-right">
               <button class="btn btn-active btn-link">Don't have an account?<br> Register instead</button>
               <button type="submit" class="btn btn-primary">Login</button>
